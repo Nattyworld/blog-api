@@ -9,6 +9,10 @@ app.use(express.json());
 
 connectDB();
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the Blog API!');
+  });
+
 app.use('/api/users', userRoutes);
 app.use('/api/blogs', blogRoutes);
 
